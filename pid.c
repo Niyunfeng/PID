@@ -32,8 +32,8 @@ int IncPIDCalc(int NextPoint)
 				- sptr->Integral * sptr->LastError
 				+ sptr->Derivative * sptr->PrevError;
 	//存储误差，用于下次计算
-	sptr->PrevError = sptr->LastError;
-	sptr->LastError = sptr->iError;
+	sptr->PrevError = sptr->iError;
+	sptr->LastError = sptr->LastError;
 
 	sptr->Uk += sptr->iIncpid;
 

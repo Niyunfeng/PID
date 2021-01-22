@@ -1,5 +1,5 @@
 #ifndef _PID_H
-#ifndef _PID_H
+#define _PID_H
 
 #ifdef _PID_C
     #define PID_EXT
