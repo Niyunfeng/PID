@@ -3,21 +3,21 @@
 
 typedef struct PID
 {
-	int SetPoint;
+    int SetPoint;
 
-	unsigned char BitMove;
+    unsigned char BitMove;
 
-	float Proportion;
-	float Integral;
-	float Derivative;
+    float Proportion;
+    float Integral;
+    float Derivative;
 
-	int iError;
-	int iIncpid;
+    int iError;
+    int iIncpid;
 
-	int LastError;
-	int PrevError;
+    int LastError;
+    int PrevError;
 
-	int Uk;
+    int Uk;
 } PID, *pPID;
 
 extern PID sPID;
