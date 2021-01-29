@@ -1,33 +1,26 @@
-#ifndef _PID_H
-#define _PID_H
-
-#ifdef _PID_C
-    #define PID_EXT
-#else
-    #define PID_EXT extern
-#endif
+#ifndef __PID_H
+#define __PID_H
 
 typedef struct PID
 {
 	int SetPoint;
-	
+
 	unsigned char BitMove;
-	
+
 	float Proportion;
 	float Integral;
 	float Derivative;
-	
+
 	int iError;
 	int iIncpid;
-	
+
 	int LastError;
 	int PrevError;
-	
-	int Uk;
-}PID,*pPID;
 
-PID_EXT PID sPID;
-PID_EXT pPID sptr;
+	int Uk;
+} PID, *pPID;
+
+extern PID sPID;
 
 void IncPIDInit(void);
 int IncPIDCalc(int NextPoint);
